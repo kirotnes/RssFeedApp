@@ -100,14 +100,27 @@ module.exports = {
             feedUrls: ["http://www.dagbladet.no/rss/fotball/"],
             tags: ["Avis", "Media"]
         }
+,
 
+        {
+            id: "6b9071c2-2b8e-447e-980d-eb6ad4b1ae3d",
+            desc: "Energi Norge er en interesse- og arbeidsgiverorganisasjon for norsk kraftnæring. Vi representerer ca. 280 bedrifter som produserer, frakter og selger strøm og varme. Medlemsbedriftene står for 99 prosent av kraftproduksjonen og dekker 90 prosent av nettkundene i Norge. Kraftnæringen jobber for bedre klima, sikker forsyning og grønn veks",
+            title: "Energi Norge",
+            feedUrls: ["http://www.energinorge.no/nyheter_rss/"],
+            tags: ["Energi"],
+            image: "oed.png"
+        }
 
+        ,
 
-
-
-
-
-
+        {
+            id: "62fda5a3-24ec-41b0-87ca-632b004bb69d",
+            title: "Olje- og energidepartementet",
+            desc: "Olje- og energidepartementet si hovedoppgåveer å tilretteleggje ein samordna og heilskapleg energipolitikk. Eit overordna mål er å sikre høg verdiskaping gjennom effektiv og miljøvenleg forvalting av energiressursane.",
+            feedUrls: ["http://www.regjeringen.no/Utilities/RSSEngine/rssprovider.aspx?pageid=759&language=nn-NO", "http://www.regjeringen.no/Utilities/RSSEngine/rssprovider.aspx?pageid=769&language=nn-NO"],
+            tags: ["Energi"],
+            image: "DEP_symbol.gif"
+        }
 
 
 
