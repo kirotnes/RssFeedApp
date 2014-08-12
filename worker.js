@@ -13,6 +13,11 @@ var worker = function() {
  
     db.feeds.find({}, function(err, feeds) {
 
+        if (err){
+        	console.log(err);
+        	
+        }
+        feeds = feeds||[];
 
         feeds.forEach(function(feed) {
 

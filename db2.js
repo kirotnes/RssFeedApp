@@ -2,7 +2,7 @@
 
     var mongojs = require("promised-mongo");
 
-    var db = mongojs(process.env.MONGODB_URI||'feeddb', ['articles',
+    var db = mongojs(process.env.MONGODB_URI||'mongodb://feeddb.cloudapp.net:27018/feeddb', ['articles',
         'feeds',
         'widgets'
     ]);
