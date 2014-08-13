@@ -22,6 +22,8 @@
 
     module.exports = db;
 
+    console.log("demo");
+
 
 
 })();
