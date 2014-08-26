@@ -88,6 +88,6 @@ var worker = function() {
 
 }
 
-setInterval(worker, 1000 * 60*5);
+setInterval(worker, 1000 * 60*10);
 
 module.exports = worker;
