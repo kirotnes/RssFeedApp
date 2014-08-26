@@ -1,14 +1,14 @@
-var cluster = require('cluster'),
-numCPUs = require('os').cpus().length;
+// var cluster = require('cluster'),
+// numCPUs = require('os').cpus().length;
 
 
-if (cluster.isMaster) {
+// if (cluster.isMaster) {
 
-    for (var i = 0; i < numCPUs; i += 1) {
-        cluster.fork();
-    }
+//     for (var i = 0; i < numCPUs; i += 1) {
+//         cluster.fork();
+//     }
 
-} else {
+// } else {
 
     console.log("Starting thread");
 
@@ -16,11 +16,14 @@ if (cluster.isMaster) {
         request = require('request'),
         uuid = require('node-uuid');
 
-    if (cluster.worker.id == 1){
+    // if (cluster.worker.id == 1){
 
-         var worker = require('./worker');
+    //      var worker = require('./worker');
+    //      worker();
+    // }
+
+     var worker = require('./worker');
          worker();
-    }
 
 
     var path = require("path");
@@ -43,11 +46,11 @@ if (cluster.isMaster) {
     app.set('views', __dirname + '/views');
     app.set('view engine', 'jade');
 
-    app.use(function(req, res, next){
-       console.log('%s %s', req.method, req.url);
-       console.log("workerid: " + cluster.worker.id);
-      next();
-    });
+    // app.use(function(req, res, next){
+    //    console.log('%s %s', req.method, req.url);
+    //    console.log("workerid: " + cluster.worker.id);
+    //   next();
+    // });
    
 
     app.use(bodyParser.json())
@@ -105,4 +108,4 @@ if (cluster.isMaster) {
     var server = app.listen(process.env.port || 3000, function() {
         console.log('Listening on port %d', server.address().port);
     });
-};
+//};
